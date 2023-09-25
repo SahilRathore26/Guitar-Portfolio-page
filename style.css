@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to right, #d6465e, rgb(231, 132, 149));
+    gap: 20px;
+}
+
+.left_text {
+    flex-basis: 30%;
+    
+}
+
+h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+p {
+    color: rgb(227, 222, 222);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.gallery {
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    grid-auto-rows: 120px;
+}
+
+.box {
+    background-size: cover;
+    /* display: flex; */
+    /* background-color: #222; */
+    /* background-blend-mode: exclusion; */
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #9999991d;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+}
+
+/* #box-2 {
+    background-position: center;
+}
+#box-5 {
+    background-position: center;
+}
+#box-7 {
+    background-position: center;
+} */
+
+.row-2 {
+    grid-row: span 2;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .gallery {
+        width: 100%;
+        padding: 10px;
+        grid-auto-rows: 220px;
+    }
+    .box {
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+}
